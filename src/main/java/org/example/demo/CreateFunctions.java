@@ -1,34 +1,40 @@
 package org.example.demo;
 
-import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import java.util.ArrayList;
 
 public class CreateFunctions {
     //-------------------------------------------------------------//
     public ImageView createImage(String file, int x, int y, int w){
         Image image = new Image(getClass().getResource(file).toExternalForm());
         ImageView imageView = new ImageView(image);
-        imageView.setLayoutX(x); // X position
-        imageView.setLayoutY(y); // Y position
-        imageView.setFitWidth(w); // scale image to 150px width
-        imageView.setPreserveRatio(true); // keep aspect ratio
+        imageView.setLayoutX(x);
+        imageView.setLayoutY(y);
+        imageView.setFitWidth(w);
+        imageView.setPreserveRatio(true);
         return imageView;
     }
 
     public Background createBackground(String file){
+        BackgroundSize backgroundSize = new BackgroundSize(
+                100, 100,
+                true, true,
+                true, false
+        );
+
+
         Image bgImage = new Image(getClass().getResource(file).toExternalForm());
         BackgroundImage backgroundImage = new BackgroundImage(
                 bgImage,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.REPEAT,
+                BackgroundRepeat.REPEAT,
                 BackgroundPosition.CENTER,
-                BackgroundSize.DEFAULT
+                backgroundSize
         );
+
         return new Background(backgroundImage);
     }
     //---------------------------------------------------------------------//
@@ -43,7 +49,8 @@ public class CreateFunctions {
     public Pane menuContent;
     public Pane menuBackground;
     public Pane menuButtons;
-    public Pane createMenu() {
+
+    public Pane createMenu(ImageView icon1, ImageView icon2, ImageView icon3) {
         Pane menu = new Pane();
 
         rect1 = new Rectangle(600, 100, 300, 400);
@@ -74,7 +81,7 @@ public class CreateFunctions {
         menuButtons = new Pane(rect1_1, rect2_1, rect3_1);
         menuContent = new Pane();
 
-        menu.getChildren().addAll(menuBackground, menuContent, menuButtons);
+        menu.getChildren().addAll(menuBackground, menuContent, menuButtons, icon1, icon2, icon3);
 
         return menu;
     }

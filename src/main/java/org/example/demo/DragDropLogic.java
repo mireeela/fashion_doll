@@ -4,8 +4,6 @@ import javafx.geometry.Bounds;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.geometry.Point2D;
-import java.util.ArrayList;
 
 public class DragDropLogic {
 
@@ -18,6 +16,13 @@ public class DragDropLogic {
         return clothingBounds.intersects(dollBounds);
     }
 
+    private boolean draggingEnabled = true;
+
+    public void setDraggingEnabled(boolean enabled) {
+        this.draggingEnabled = enabled;
+    }
+
+
     public void dragdrop(Pane pane, ImageView draggable, Pane menuContent) {
         ImageView target = (ImageView) pane.getChildren().getFirst();
 
@@ -25,17 +30,34 @@ public class DragDropLogic {
         originalY = draggable.getLayoutY();
 
         draggable.setOnMousePressed(e -> {
+            if (!draggingEnabled) return;
 
             offsetX = e.getSceneX() - draggable.getLayoutX();
             offsetY = e.getSceneY() - draggable.getLayoutY();
 
+            Pane currentParent = (Pane) draggable.getParent();
+            if(currentParent != pane){
+                pane.toBack();
+            } else if (currentParent != menuContent) {
+                pane.toFront();
+            }
+
         });
+
         draggable.setOnMouseDragged(e -> {
+            if (!draggingEnabled) return;
+
             draggable.setLayoutX(e.getSceneX() - offsetX);
             draggable.setLayoutY(e.getSceneY() - offsetY);
 
+
+
         });
         draggable.setOnMouseReleased(e -> {
+            if (!draggingEnabled) return;
+
+            pane.toFront();
+
             Pane currentParent = (Pane) draggable.getParent();
 
             if (isNear(draggable, target)) {

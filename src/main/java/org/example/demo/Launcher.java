@@ -10,6 +10,7 @@ public class Launcher  extends Application{
     public void start(Stage stage)  {
         game.start(stage);
     }
+
     public static void main(String[] args) {
         launch(args);
     }

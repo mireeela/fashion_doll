@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d8217a2-76b2-4bfd-a3e3-a1ca980757ec" name="Changes" comment="" />
+    <list default="true" id="2d8217a2-76b2-4bfd-a3e3-a1ca980757ec" name="Changes" comment="Initial project upload">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/icon1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/icon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/icon3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/icon4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/CreateFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/CreateFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/DragDropLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/DragDropLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/LoadingImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/LoadingImages.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +30,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -46,10 +60,10 @@
     "Application.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/a/prog/2dproject/demo",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "last_opened_file_path": "C:/a/prog/2dproject/demo/src/main/resources/images",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -70,5 +84,9 @@
       <updated>1761123046043</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial project upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial project upload" />
   </component>
 </project>
